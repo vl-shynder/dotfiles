@@ -18,6 +18,7 @@ case "$(uname -s)" in
     ;;
 esac
 GHOSTTY_CONFIG="$GHOSTTY_DIR/config.ghostty"
+GHOSTY_SHADER="$GHOSTTY_DIR/shaders/ghosty-glass.glsl"
 
 backup_and_link() {
   local source="$1" target="$2"
@@ -33,6 +34,7 @@ backup_and_link() {
 
 backup_and_link "$ROOT/herdr/config.toml" "$HERDR_CONFIG"
 backup_and_link "$ROOT/ghosty/config.ghostty" "$GHOSTTY_CONFIG"
+backup_and_link "$ROOT/ghosty/shaders/ghosty-glass.glsl" "$GHOSTY_SHADER"
 mkdir -p "$REVIEWR_CONFIG_DIR"
 backup_and_link "$ROOT/herdr/plugins/reviewr/config.toml" "$REVIEWR_CONFIG_DIR/config.toml"
 

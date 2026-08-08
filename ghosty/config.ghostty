@@ -1,20 +1,29 @@
 # Repo-managed Ghostty configuration.
 # Live path on macOS: ~/Library/Application Support/com.mitchellh.ghostty/config.ghostty
 
-# Tokyo Night is a current, readable dark palette that matches Herdr and reviewr.
-theme = TokyoNight Night
+# Tokyo Night remains the visual anchor across Ghostty, Herdr, and reviewr.
+theme = light:TokyoNight Day,dark:TokyoNight Night
 font-family = SF Mono
 font-size = 14
 font-thicken = true
-cursor-style = block
+cursor-style = bar
 cursor-style-blink = false
+cursor-color = #7AA2F7
+selection-background = #33467C
 
 window-padding-x = 12
 window-padding-y = 10
 window-padding-balance = true
 window-decoration = auto
-background-opacity = 0.98
+background-opacity = 0.94
+background-blur = macos-glass-regular
 macos-titlebar-style = transparent
+unfocused-split-opacity = 0.84
+split-divider-color = #3B4261
+
+# A static, low-intensity edge treatment adds atmosphere without moving text.
+custom-shader = shaders/ghosty-glass.glsl
+custom-shader-animation = false
 
 shell-integration = zsh
 macos-option-as-alt = true
@@ -23,4 +32,4 @@ copy-on-select = false
 confirm-close-surface = false
 
 keybind = global:cmd+ctrl+enter=toggle_quick_terminal
-
+keybind = cmd+shift+o=toggle_background_opacity
