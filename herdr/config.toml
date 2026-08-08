@@ -30,6 +30,8 @@ focus_pane_left = "prefix+h"
 focus_pane_down = "prefix+j"
 focus_pane_up = "prefix+k"
 focus_pane_right = "prefix+l"
+cycle_pane_next = "prefix+tab"
+cycle_pane_previous = "prefix+shift+tab"
 close_pane = "prefix+x"
 zoom = "prefix+z"
 reload_config = "prefix+shift+r"
@@ -41,12 +43,12 @@ type = "plugin_action"
 command = "persiyanov.reviewr.toggle"
 description = "toggle reviewr"
 
-# reviewr.open: explicitly open a new review pane in the current workspace.
+# reviewr.open-tab: create a dedicated tab and launch reviewr in it.
 [[keys.command]]
 key = "prefix+shift+f"
-type = "plugin_action"
-command = "persiyanov.reviewr.open"
-description = "open reviewr pane"
+type = "shell"
+command = 'herdr plugin pane open --plugin persiyanov.reviewr --entrypoint pane --placement tab --workspace "$HERDR_ACTIVE_WORKSPACE_ID" --cwd "$HERDR_ACTIVE_PANE_CWD" --focus'
+description = "open reviewr tab"
 
 [ui]
 sidebar_width = 30
@@ -83,4 +85,3 @@ resume_agents_on_restore = true
 
 [advanced]
 scrollback_limit_bytes = 50000000
-

@@ -7,6 +7,7 @@ This repository contains the local configuration for Herdr, Ghostty, and the Her
 - `herdr/config.toml`: Herdr UI, theme, terminal behavior, keybindings, and Codex-friendly session restore.
 - `herdr/plugins/reviewr/config.toml`: reviewr layout and Tokyo Night theme.
 - `ghosty/config.ghostty`: Ghostty theme, font, spacing, and terminal behavior.
+- `ghosty/shaders/ghosty-glass.glsl`: a static, low-intensity edge shader for the Ghosty atmosphere.
 - `bootstrap.sh`: backs up existing live config, links these files into place, installs reviewr, and installs the Codex integration.
 
 ## Keybindings
@@ -14,7 +15,8 @@ This repository contains the local configuration for Herdr, Ghostty, and the Her
 The Herdr prefix remains `Ctrl+B`:
 
 - `Ctrl+B`, then `F`: toggle reviewr in the current workspace.
-- `Ctrl+B`, then `Shift+F`: explicitly open a new reviewr pane.
+- `Ctrl+B`, then `Shift+F`: open reviewr in a dedicated tab.
+- `Ctrl+B`, then `N` / `P`: switch between tabs.
 
 ## Apply locally
 
@@ -25,6 +27,8 @@ From this directory, run:
 ```
 
 Restart Ghostty after the script completes. Herdr can reload its config with `herdr server reload-config`.
+
+The Ghostty config uses native macOS glass on macOS 26+, with a static shader layered on top. Press `Cmd+Shift+O` to toggle between the glass and opaque background when an application needs maximum contrast.
 
 If reviewr installation reports `plugin_user_dir_create_failed`, the user-local `~/.local/state` directory may be owned by `root`. On macOS, run this once in a normal local terminal, then rerun the bootstrap script:
 
