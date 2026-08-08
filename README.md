@@ -16,6 +16,7 @@ The Herdr prefix remains `Ctrl+B`:
 
 - `Ctrl+B`, then `F`: toggle reviewr in the current workspace.
 - `Ctrl+B`, then `Shift+F`: open reviewr in a dedicated tab.
+- `Tab` / `Shift+Tab`: switch between panes.
 - `Ctrl+B`, then `N` / `P`: switch between tabs.
 
 ## Apply locally
