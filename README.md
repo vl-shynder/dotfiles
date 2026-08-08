@@ -42,7 +42,7 @@ The bootstrap script does not handle GitHub credentials. To publish this as a pu
 1. Run `gh auth login -h github.com` and complete the browser/device flow.
 2. From this directory, run `git init`, stage the files below, and review `git diff --cached`.
 3. Run `git commit -m "Add Herdr and Ghostty configuration"`.
-4. Run `gh repo create herdr-ghostty-config --public --source=. --remote=origin --push`.
+4. Run `gh repo create dotfiles --public --source=. --remote=origin --push`.
 
 Stage only the configuration files. This directory contains unrelated existing files, so use:
 
