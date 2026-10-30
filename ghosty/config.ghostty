@@ -1,15 +1,13 @@
 # Repo-managed Ghostty configuration.
 # Live path on macOS: ~/Library/Application Support/com.mitchellh.ghostty/config.ghostty
 
-# Tokyo Night remains the visual anchor across Ghostty, Herdr, and reviewr.
-theme = light:TokyoNight Day,dark:TokyoNight Night
+# Catppuccin stays consistent across Ghostty, Herdr, and reviewr.
+theme = light:Catppuccin Latte,dark:Catppuccin Mocha
 font-family = SF Mono
 font-size = 14
 font-thicken = true
 cursor-style = bar
 cursor-style-blink = false
-cursor-color = #7AA2F7
-selection-background = #33467C
 
 window-padding-x = 12
 window-padding-y = 10
@@ -19,7 +17,6 @@ background-opacity = 0.94
 background-blur = macos-glass-regular
 macos-titlebar-style = transparent
 unfocused-split-opacity = 0.84
-split-divider-color = #3B4261
 
 # A static, low-intensity edge treatment adds atmosphere without moving text.
 custom-shader = shaders/ghosty-glass.glsl
