@@ -13,6 +13,8 @@ Do not wait for the delegated agent to finish unless the user asks you to wait. 
 
 Always close agents that are done with their task in full and there is no more delegation to be done.
 
+When reviewing code, use /ponytail-review or let the delegated agent use it.
+
 # Model per task
 
 You should pick appropriate model for the delegated task. Here is a list of models and their preferred tasks:
