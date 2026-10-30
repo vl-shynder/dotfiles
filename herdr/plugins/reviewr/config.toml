@@ -1,7 +1,7 @@
 # Repo-managed reviewr configuration.
 # Live path: ~/.config/herdr/plugins/config/persiyanov.reviewr/config.toml
 
-theme = "tokyo-night"
+theme = "catppuccin"
 base_branches = ["main", "master", "develop"]
 default_scope = "branch"
 navigator_position = "right"

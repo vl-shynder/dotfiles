@@ -16,7 +16,7 @@ The Herdr prefix remains `Ctrl+B`:
 
 - `Ctrl+B`, then `F`: toggle reviewr in the current workspace.
 - `Ctrl+B`, then `Shift+F`: open reviewr in a dedicated tab.
-- `Tab` / `Shift+Tab`: switch between panes.
+- `Ctrl+B`, then `Tab` / `Shift+Tab`: switch between panes.
 - `Ctrl+B`, then `N` / `P`: switch between tabs.
 
 ## Apply locally
@@ -56,3 +56,15 @@ git add .gitignore README.md bootstrap.sh herdr ghosty
 ```
 
 Do not commit tokens, private keys, or plugin runtime state. The `.gitignore` excludes common local artifacts.
+
+## Agent delegation guidance
+
+The `skills/herdr-delegation` skill defines the shared Herdr workflow for Codex and Claude. Root `AGENTS.md` and `CLAUDE.md` provide client-specific routing instructions.
+
+Install or refresh the user-level skill links and routing instructions with:
+
+```sh
+./install-agent-guidance.sh
+```
+
+The installer links the source skill into `~/.agents/skills`, then links it from `~/.codex/skills` and `~/.claude/skills`. It adds an idempotent routing line to `~/.codex/AGENTS.md` and `~/.claude/CLAUDE.md`.
